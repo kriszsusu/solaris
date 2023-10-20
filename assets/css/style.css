@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* ez az egész egy káosz de legalább működik (sorta) */
+
+html{
+    scroll-behavior: smooth;
+}
+
+html,body{
+    padding:0;
+    margin:0;
+    font-family: 'Inter', sans-serif;
+    background-color: #06070A;
+    color:white;
+}
+
+nav {
+    background-color: transparent;
+    color: #fff;
+    padding: 5px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    position:fixed;
+    width:100vw;
+    gap:15em;
+    backdrop-filter: blur(0em);
+    transition: background-color 0.3s, backdrop-filter 0.3s;
+    z-index:99;
+}
+
+.colorNav{
+    background-color: #06070Add;
+    backdrop-filter: blur(1em);
+}
+
+.logo {
+    flex-shrink: 0;
+    margin-right:2vw;
+}
+
+.logo img {
+    width: 2em;
+    aspect-ratio: 1/1;
+}
+
+ul{list-style: none;display:flex;justify-content: center;align-items: center;}
+
+ul li{
+    margin-right: 20px;
+    font-size: 1em;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+nav a:hover {
+    color: #ccc;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+section.solaris {
+    font-size: 7em;
+    font-weight: 700;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(6, 7, 10, 0.80) 0%, #06070A 100%), url('../img/1a5cc5983da79c305f1e8adbf28d0444.jpg'), lightgray 50% / cover no-repeat;
+}
+
+.solaris .arrowDown {
+    font-size: .4em;
+}
+
+h2{
+    font-size:4em;
+    font-weight: 500;
+}
+
+.cardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2em;
+    width: 70%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background: linear-gradient(180deg, rgba(77, 77, 77, 0.30) 0%, rgba(77, 77, 77, 0.30) 0.01%, rgba(41, 41, 41, 0.00) 100%), url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='50' ry='50' stroke='%23333' stroke-width='4' stroke-dasharray='20' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+    padding: 1em;
+    width: 25em;
+    line-height: 0;
+    margin-top: 5em;
+}
+h5{
+    font-size: 2em;
+    font-weight: 400;
+}
+
+.fm {
+    border-radius: 50px;
+    background: linear-gradient(180deg, rgba(130, 34, 10, 0.30) 0%, rgba(226, 208, 148, 0.00) 100%), url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='50' ry='50' stroke='%23333' stroke-width='4' stroke-dasharray='20' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+}
+
+.card img {
+    width: 10em;
+    aspect-ratio: 1/1;
+    text-align: center; /* ha esetleg nem tölt be a kép */
+    position:relative;
+    z-index:1;
+    margin-top:-4em;
+    border-radius: 50%;
+    transform: translateY(0);
+    box-shadow: 0px 0px 0px 0px #fff0;
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+}
+
+.card img:hover{
+    transform: translateY(-1em);
+    box-shadow: 0px 1em 1em 0px #fff1;
+}
+
+.card p {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: -.5em;
+    font-weight: 300;
+}
+
+.aboutus p{
+    font-size: 2em;
+    width: 50%;
+    text-align: center;
+    font-weight: 400;
+}
+
+section.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.maps {
+    width: 45rem;
+    height: 25rem;
+    align-self: center;
+}
+
+.maps iframe {
+    width: 100%;
+    height: 100%;
+    border:0;
+    border-radius:2em;
+}
+
+@media (max-width: 768px) {
+    section.solaris {
+        font-size: 3.5em;
+    }
+    h2{
+        font-size:2.25em;
+    }
+    .card {
+        width: 15em;
+        margin-top: 3em;
+    }
+    .card h5 {
+        font-size: 1.5em;
+    }
+    .card p{
+        font-size: 1em;
+    }
+    .card img{
+        width: 7em;
+    }
+    nav {
+        flex-direction: column;
+        gap:0em;
+        font-size:.7em;
+    }
+    .aboutus p{
+        font-size: 1.5em;
+        width: 100%;
+    }
+    .maps {
+        width: 20rem;
+    }
+}
+@media (max-width: 1024px) {
+    .whoarewe{
+        margin-bottom: 5em;
+        /* quick fix */
+    }
+}

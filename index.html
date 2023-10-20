@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>test</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="assets/img/icon.svg" alt="Solaris logo">
+        </div>
+        <ul>
+            <a href="#whoarewe"><li>Kik vagyunk mi?</li></a>
+            <a href="#about"><li>Rólunk</li></a>
+            <a href="#contact"><li>Elérhetőségek</li></a>
+        </ul>
+    </nav>
+    <section class="solaris">
+        <h1>SOLARIS</h1>
+        <div class="arrowDown"><i class="fa-solid fa-caret-down"></i></div>
+    </section>
+    <section class="whoarewe" id="whoarewe">
+        <h2>Kik vagyunk mi?</h2>
+        <div class="cardContainer">
+            <div class="card ck">
+                <img src="assets/img/ck.jpg" alt="Chlebik Krisztofer">
+                <h5>Chlebik Krisztofer</h5>
+                <p>Csapattag</p>
+            </div>
+            <div class="card fm">
+                <img src="assets/img/fm.jpg" alt="Farkas Máté">
+                <h5>Farkas Máté</h5>
+                <p>Csapattag</p>
+            </div>
+        </div>
+    </section>
+    <section class="aboutus" id="about">
+        <h2>Rólunk</h2>
+        <p>Napenergiával formáljuk a jövőt 2019 óta. Hatékony napelemrendszerekkel segítjük ügyfeleinket tiszta és költséghatékony energiaforrások használatában, miközben társadalmi kezdeményezésekkel elősegítjük a fenntarthatóságot.</p>
+    </section>
+    <section class="contact" id="contact">
+        <h2>Elérhetőségek</h2>
+        <div class="maps">
+            <iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Szentes,+Hódmezővásárhelyi+SZC+Szentesi+Pollák+Antal+Technikum,+Apponyi+tér,+Hungary&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
+        </div>
+    </section>
+
+    <script>
+        /* if the user scrolled enough, add a class to the nav */
+        const nav = document.querySelector('nav');
+        window.onscroll = function() {
+            if (window.pageYOffset > 100) {
+                nav.classList.add('colorNav');
+            } else {
+                nav.classList.remove('colorNav');
+            }
+        }
+    </script>
+</body>
+</html>
