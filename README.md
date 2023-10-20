@@ -1,0 +1,2 @@
+# solaris
+IKT Projektmunka feladat
