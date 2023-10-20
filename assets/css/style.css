@@ -212,10 +212,7 @@ section.contact {
         /* quick fix */
     }
 }
-@media (max-height: 1000px) {
-    .maps {
-        width: 20rem;
-    }
+@media (max-height: 900px) {
     section {
         margin-bottom:5em;
     }
